@@ -1,8 +1,8 @@
 import datetime
-import re #regex kullanabilmek için kullanılan kütühane
-import strictyaml #api dosyalarının olduğu dosyaya erişim için kullanılan kütüphane
-import requests #bir web sitesine istek atabilmek için kullanılan kütüphane
-import hashlib #md5 decoder için kullanılan kütüphane
+import re 
+import strictyaml 
+import requests 
+import hashlib 
 
 import time
 import tkinter
@@ -31,14 +31,12 @@ def switchMenu(choice):
         phishingurl_list()
     if choice == '5':
         Md5Encoder()
-    #if choice == '6':       WhoIs()
     if choice == '6':
         reverseDnsLookup()
     if choice == '7':
         dnsLookup()
     if choice == '8':
-        unshortenUrl()
-    #if choice == '9': hashRatingChecking() 
+        unshortenUrl() 
     else:
         mainMenu()
 def mainMenu():
@@ -51,11 +49,9 @@ def mainMenu():
     print("\n OPTION 3: URL Scan")
     print("\n OPTION 4: URL Phishing Detection")
     print("\n OPTION 5: MD5 Decoder")
-   #print("\n OPTION 6: WHOIS") #
     print("\n OPTION 6: Reverse Dns Lookup")
     print("\n OPTION 7: Dns Lookup")
-    print("\n OPTION 8: Unshorten URL") #kısaltılmış linkin tam halini çıkartıyor
-    #print("\n OPTION 9: Malware Hash Check in Virus Total ")#
+    print("\n OPTION 8: Unshorten URL")    
 
 
     switchMenu(input())
@@ -180,12 +176,6 @@ def Md5Encoder():
     text = input(" Please input the encoded text: ")
     print(" MD5 Encoded Text: " + hashlib.md5(text.encode("utf-8")).hexdigest())
     karar()
-
-# def WhoIs():
-    # data = str(input(' Enter Domain: ').strip())
-    # w = whois.(data)
-    #print(os.system("whois google.com")) #
-    # print(w) #
 
 def reverseDnsLookup():
     d = str(input(" Enter IP: ").strip())
